@@ -1,0 +1,178 @@
+/* Estilo para la sección principal (hero) */
+.hero {
+    /* Aquí pones la imagen de fondo. Puedes usar una de un sitio gratuito como Unsplash. */
+   background-image: url('fondo_piano.jpg');
+    background-size: center; /* La imagen cubre todo el espacio */
+background-position: center; /* Agrega esta línea para centrar la imagen */
+    color: white; /* Color del texto para que se vea sobre la imagen */
+    height: 100vh; /* La sección ocupa toda la altura de la pantalla */
+
+    /* Flexbox: la mejor manera de centrar elementos */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    
+    
+}
+
+/* Estilo para el contenedor del contenido */
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Un fondo semitransparente para que el texto se lea mejor */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para el título principal */
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: rgb(247, 243, 243); /* Agrega esta línea para que el título sea blanco */
+}
+
+
+/* Estilo para el subtítulo */
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em; /* Espacio para separar del botón */
+    color: rgb(255, 255, 255);
+}/* Estilo del botón */
+.cta-button {
+    display: inline-block;
+    background-color: #ff5722; /* Un color anaranjado llamativo */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes más redondeados */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease; /* Transición suave para el efecto */
+}
+
+/* El efecto al pasar el mouse por encima */
+.cta-button:hover {
+    background-color: #e64a19; /* Cambia a un color más oscuro */
+    transform: scale(1.05); /* Hace que el botón crezca un poco */
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Estilos para la sección de beneficios */
+.beneficios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.beneficios h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.beneficios-container {
+    display: flex; /* Usamos Flexbox para alinear los elementos en fila */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea en pantallas pequeñas */
+}
+
+.beneficio-item {
+    flex-basis: 300px; /* Tamaño base para cada elemento */
+    margin: 20px;
+    padding: 20px;
+}
+
+.beneficio-item img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+/* Estilos para la sección de testimonios */
+.testimonios {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonios h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonio-item {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    flex-basis: 300px;
+}
+
+.testimonio-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Hace la imagen circular */
+    margin-bottom: 20px;
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+}
+
+.testimonio-item p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonio-item h4 {
+    margin-top: 15px;
+    color: #333;
+}
+/* Estilos para la sección final de llamada a la acción */
+.cta-final {
+    background-color: #333; /* Un color oscuro para que contraste */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta-final h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+/*
+  ==========================================
+  MEDIA QUERIES PARA ADAPTAR A DISPOSITIVOS PEQUEÑOS
+  ==========================================
+*/
+
+@media (max-width: 768px) {
+    
+    /* Estilo para la sección de beneficios en pantallas pequeñas */
+    .beneficios-container {
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        align-items: center;
+    }
+    
+    /* Estilo para los testimonios en pantallas pequeñas */
+    .testimonios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficio-item,
+    .testimonio-item {
+        margin: 15px 0;
+    }
+
+    /* Ajustar tamaño de fuente en pantallas pequeñas */
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
